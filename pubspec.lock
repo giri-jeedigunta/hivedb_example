@@ -224,20 +224,16 @@ packages:
   hive:
     dependency: "direct main"
     description:
-      path: hive
-      ref: HEAD
-      resolved-ref: d7ee72537a3b7ce1284bcbf5ee5f86e617a4f6fc
-      url: "https://github.com/hivedb/hive"
-    source: git
+      name: hive
+      url: "https://pub.dartlang.org"
+    source: hosted
     version: "1.4.1+1"
   hive_flutter:
     dependency: "direct main"
     description:
-      path: hive_flutter
-      ref: HEAD
-      resolved-ref: d7ee72537a3b7ce1284bcbf5ee5f86e617a4f6fc
-      url: "https://github.com/hivedb/hive"
-    source: git
+      name: hive_flutter
+      url: "https://pub.dartlang.org"
+    source: hosted
     version: "0.3.0+2"
   hive_generator:
     dependency: "direct dev"

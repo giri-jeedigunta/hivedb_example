@@ -43,18 +43,10 @@ dev_dependencies:
   hive_generator: ^0.7.0+2
 
 dependency_overrides:
-  hive:
-    git:
-      url: https://github.com/hivedb/hive
-      path: hive
   hive_generator:
     git:
       url: https://github.com/hivedb/hive
       path: hive_generator
-  hive_flutter:
-    git:
-      url: https://github.com/hivedb/hive
-      path: hive_flutter
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

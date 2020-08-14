@@ -26,6 +26,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     final quotesList = Provider.of<QuotesListStore>(context);
+    quotesList.getQuotes();
     return Scaffold(
       appBar: AppBar(
         title: Text('HiveDB + MobX'),

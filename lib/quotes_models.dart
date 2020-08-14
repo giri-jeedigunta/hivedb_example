@@ -1,16 +1,8 @@
-class CacheLog {
-  CacheLog(this.id, this.name, this.lastUpdated);
+import 'package:hive/hive.dart';
 
-  final int id;
-  final String name, lastUpdated;
+part 'quotes_models.g.dart';
 
-  Map<String, dynamic> toMap() => {
-        'id': id,
-        'name': name,
-        'lastUpdated': lastUpdated,
-      };
-}
-
+@HiveType(typeId: 0)
 class Quotes {
   Quotes(
     this.id,
@@ -19,13 +11,15 @@ class Quotes {
     this.quoteId,
   );
 
+  @HiveField(0)
   final int id;
-  final String author, quote, quoteId;
 
-  Map<String, dynamic> toMap() => {
-        'id': id,
-        'author': author,
-        'quote': quote,
-        'quoteId': quoteId,
-      };
+  @HiveField(1)
+  final String author;
+
+  @HiveField(2)
+  final String quote;
+
+  @HiveField(3)
+  final String quoteId;
 }
