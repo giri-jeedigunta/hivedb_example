@@ -6,7 +6,7 @@ part of 'quotes_store.dart';
 // StoreGenerator
 // **************************************************************************
 
-// ignore_for_file: non_constant_identifier_names, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
+// ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
 
 mixin _$QuotesListStore on _QuotesListStore, Store {
   final _$allQuotesAtom = Atom(name: '_QuotesListStore.allQuotes');
@@ -24,6 +24,21 @@ mixin _$QuotesListStore on _QuotesListStore, Store {
     });
   }
 
+  final _$initHiveDBAtom = Atom(name: '_QuotesListStore.initHiveDB');
+
+  @override
+  bool get initHiveDB {
+    _$initHiveDBAtom.reportRead();
+    return super.initHiveDB;
+  }
+
+  @override
+  set initHiveDB(bool value) {
+    _$initHiveDBAtom.reportWrite(value, super.initHiveDB, () {
+      super.initHiveDB = value;
+    });
+  }
+
   final _$getQuotesAsyncAction = AsyncAction('_QuotesListStore.getQuotes');
 
   @override
@@ -34,7 +49,8 @@ mixin _$QuotesListStore on _QuotesListStore, Store {
   @override
   String toString() {
     return '''
-allQuotes: ${allQuotes}
+allQuotes: ${allQuotes},
+initHiveDB: ${initHiveDB}
     ''';
   }
 }

@@ -8,13 +8,13 @@ part of 'quotes_models.dart';
 
 class QuotesAdapter extends TypeAdapter<Quotes> {
   @override
-  final typeId = 0;
+  final int typeId = 0;
 
   @override
   Quotes read(BinaryReader reader) {
-    var numOfFields = reader.readByte();
-    var fields = <int, dynamic>{
-      for (var i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
     };
     return Quotes(
       fields[0] as int,
