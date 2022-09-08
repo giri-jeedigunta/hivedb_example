@@ -7,7 +7,7 @@ class ApiService {
   final String endPointURL;
 
   Future getResponse() async {
-    final response = await http.get(endPointURL);
+    final response = await http.get(Uri.parse(endPointURL));
     print('URL: $endPointURL \n status: ${response.statusCode}');
     print('Response: $response');
     return response.statusCode == 200 ? jsonDecode(response.body) : null;
