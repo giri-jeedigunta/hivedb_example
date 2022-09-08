@@ -45,7 +45,7 @@ abstract class _QuotesListStore with Store {
   }
 
   Future<void> getQuotesFromApi() async {
-    final apiHelper = ApiService('$kBaseApiURL/page/1');
+    final apiHelper = ApiService('$kBaseApiURL');
     final data = await apiHelper.getResponse();
     int counter = 0;
 
