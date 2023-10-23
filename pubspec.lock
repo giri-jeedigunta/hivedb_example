@@ -218,10 +218,10 @@ packages:
     dependency: "direct main"
     description:
       name: flutter_mobx
-      sha256: "906d858f3883140624c41eba5d60d0134ab94f565a39fb2a18439bf920931035"
+      sha256: a3f2c45611fc7a8c65981b35f3095f4ea41595c0e108fd7e7c1828a6e648c21e
       url: "https://pub.dev"
     source: hosted
-    version: "2.0.6+1"
+    version: "2.1.0+1"
   flutter_test:
     dependency: "direct dev"
     description: flutter
